@@ -80,7 +80,7 @@ def get_pylint_options(
             '--disable=C0115',
             '--disable=C0116',
         ]
-    pylint_dir = os.getcwd()
+    pylint_dir = os.path.dirname(__file__)
     pylint_options += get_inspected_files(
         pylint_dir=pylint_dir,
         ignored=[os.path.join(pylint_dir, path) for path in _ignored_paths],
@@ -92,7 +92,7 @@ def get_pylint_options(
 
 if __name__ == '__main__':
     PYLINT_OPTIONS = get_pylint_options(
-        is_documentation_ignored=True,
+        is_documentation_ignored=False,
         is_printed=False,
     )
     pylint.lint.Run(PYLINT_OPTIONS)
