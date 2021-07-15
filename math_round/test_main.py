@@ -56,16 +56,6 @@ def test_get_rounded_number_0_expected(number, expected):
     assert get_rounded_number(number, 0) == expected
 
 
-@pytest.mark.parametrize("number", [0.5, -0.5])
-def test_get_rounded_number_0_built_in(number):
-    """
-    Test for `get_rounded_number` with `number_of_digits_after_separator`
-    equal to 0.
-
-    """
-    assert abs(get_rounded_number(number, 0) - round(number, 0)) == 1.0
-
-
 @pytest.mark.parametrize("number, expected", CASES[1])
 def test_get_rounded_number_1_expected(number, expected):
     """
