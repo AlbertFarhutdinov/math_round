@@ -7,7 +7,7 @@ requirements = ["pylint==2.9.3", "pytest==6.2.4"]
 
 setuptools.setup(
     name="math_round_af",
-    version="1.0.0",
+    version="1.0.1",
     author="Albert Farkhutdinov",
     author_email="albertfarhutdinov@gmail.com",
     description=(
