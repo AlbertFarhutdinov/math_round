@@ -41,12 +41,13 @@ def get_inspected_files(
             continue
         for file in files:
             if dir_name not in ignored and file.endswith('.py'):
-                new_options.append(os.path.join(dir_name, file))
+                new_options.append(os.path.join(pylint_dir, file))
     return new_options
 
 
 def get_pylint_options(
         is_documentation_ignored: bool,
+        is_relative_import_ignored: bool,
         is_printed: bool,
         ignored_paths: Optional[set] = None,
 ) -> List[str]:
@@ -57,7 +58,9 @@ def get_pylint_options(
     ----------
     is_documentation_ignored : bool
         If it is True, checking for statements
-        on missed docstrings (C0114, C0115, C0116) are ignored.
+        on missed docstrings (C0114, C0115, C0116) is ignored.
+    is_relative_import_ignored : bool
+        If it is True, checking for statements E0402 is ignored.
     is_printed : bool
         If it is True, pylint options are printed.
     ignored_paths : set, optional
@@ -80,6 +83,10 @@ def get_pylint_options(
             '--disable=C0115',
             '--disable=C0116',
         ]
+    if is_relative_import_ignored:
+        pylint_options += [
+            '--disable=E0402',
+        ]
     pylint_dir = os.path.dirname(__file__)
     pylint_options += get_inspected_files(
         pylint_dir=pylint_dir,
@@ -93,6 +100,7 @@ def get_pylint_options(
 if __name__ == '__main__':
     PYLINT_OPTIONS = get_pylint_options(
         is_documentation_ignored=False,
+        is_relative_import_ignored=False,
         is_printed=False,
     )
     pylint.lint.Run(PYLINT_OPTIONS)
