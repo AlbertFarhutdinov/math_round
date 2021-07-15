@@ -18,12 +18,12 @@ To install `math_round_af`, follow these steps:
 
 Linux and macOS:
 ```
-pip3 install math_round_af
+pip3 install math-round-af
 ```
 
 Windows:
 ```
-pip install math_round_af
+pip install math-round-af
 ```
 ## Using `math_round_af`
 
