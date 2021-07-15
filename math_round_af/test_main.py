@@ -1,4 +1,4 @@
-"""This module contain test for `math_round` project."""
+"""This module contain test for `math_round_af` project."""
 
 
 import pytest
