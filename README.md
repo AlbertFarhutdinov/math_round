@@ -1,6 +1,7 @@
 # math_round_af
 
 ![GitHub repo size](https://img.shields.io/github/issues/AlbertFarkhutdinov/math_round_af)
+![PyPI version](https://img.shields.io/pypi/v/math_round_af)
 ![GitHub contributors](https://img.shields.io/github/contributors/AlbertFarkhutdinov/math_round_af)
 ![GitHub stars](https://img.shields.io/github/stars/AlbertFarkhutdinov/math_round_af)
 ![GitHub forks](https://img.shields.io/github/forks/AlbertFarkhutdinov/math_round_af)
