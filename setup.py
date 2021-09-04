@@ -3,11 +3,11 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-requirements = ["pylint==2.9.3", "pytest==6.2.4"]
+requirements = ["pylint-af==1.0.1", "pytest==6.2.5"]
 
 setuptools.setup(
     name="math_round_af",
-    version="1.0.1",
+    version="1.0.2",
     author="Albert Farkhutdinov",
     author_email="albertfarhutdinov@gmail.com",
     description=(
